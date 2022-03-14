@@ -30,26 +30,27 @@ nameFormButton.addEventListener('click', (e) => {
     name2 = teamTwoInput.value;
 
     // reset the form values
-    teamOneInput.textContent='';
-    teamTwoInput.textContent='';
+    teamOneInput.value = '';
+    teamTwoInput.value = '';
 
     // refresh the current game element with new data by calling the appropriate function
-    const gameEl = renderGame(name1, name2, score1, score2);
+    refreshCurrentGameEl();
 
-    currentGameEl.textContent = '';
-    currentGameEl.append(gameEl);
-console.log('click')
 
 });
 
 
 teamOneAddButton.addEventListener('click', () => {
     // increment the current state for team one's score
-    
+    score1++;
+   
     // refresh the current game element with new data by calling the appropriate function
+    refreshCurrentGameEl();
 });
 
 teamTwoAddButton.addEventListener('click', () => {
+    score2++;
+    console.log('click');
     // increment the current state for team two's score
 
     // refresh the current game element with new data by calling the appropriate function
@@ -90,6 +91,7 @@ function refreshCurrentGameEl() {
 
     // const gameEl = . . . 
     // make a new gameEl here by calling renderGame with the approriate arguments. 
+    const gameEl = renderGame(name1, name2, score1, score2);
     // Check the renderGame function declaration in render-utils.js to figure out the correct arguments to pass to this function 
     // In render-utils.js as yourself: How many arguments does the function take? What order does it take them in?
     
