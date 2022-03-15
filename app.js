@@ -99,6 +99,7 @@ finishGameButton.addEventListener('click', () => {
     // refresh the current game element with new data by calling the appropriate function
 });
 
+
 function refreshCurrentGameEl() {
     currentGameEl.textContent = '';
 
@@ -119,7 +120,10 @@ function refreshCurrentGameEl() {
 
 function displayAllGames() {
     // clear out the past games list in the DOM
+    currentGameEl.textContent = '';
     pastGamesEl.textContent = '';
+    score1 = 0;
+    score2 = 0;
 
     // loop through the past games in state
     for (let game of pastGames) {
@@ -129,4 +133,7 @@ function displayAllGames() {
     // use the renderGame function to render and append a past game for each past game in state
     // again, review the renderGame function in render-utils.js. How many arguments does it take? What order does it take them in?
     }
+
+
+
 }
