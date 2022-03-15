@@ -23,7 +23,7 @@ let score1 = 0;
 let score2 = 0;
 let pastGames = [];
 
-nameFormButton.addEventListener('click', (e) => {
+nameFormButton.addEventListener('click', () => {
     // get the name data from the form
 
     // set the state to this data from the form
@@ -133,7 +133,5 @@ function displayAllGames() {
     // use the renderGame function to render and append a past game for each past game in state
     // again, review the renderGame function in render-utils.js. How many arguments does it take? What order does it take them in?
     }
-
-
 
 }
